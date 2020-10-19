@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .header {
-  background-image: url(../img/background.jpg);
+  background-image: url('../img/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -23,7 +23,6 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .container {
   max-width: 1140px;
-  width: 100%;
   margin: 0 auto;  
 }
 
@@ -231,7 +230,7 @@ header {
 }
 
 .img-developers {
-  background-image: url(../img/develop.jpg);
+  background-image: url('../img/develop.jpg');
   background-repeat:no-repeat;
   background-size: cover;
   box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
@@ -260,6 +259,10 @@ header {
 
 .about-us-item:last-child {
   margin-right: 0;
+}
+
+.about-us-item-link {
+  display: none;
 }
 
 .about-us-items {
@@ -340,7 +343,7 @@ header {
 .img-card {
   width: 100%;
   min-height: 300px;
-  background-image: url(../img/background.jpg);
+  background-image: url('../img/background.jpg');
   background-repeat:no-repeat;
   background-size:cover;
   border-radius: 10px;
@@ -390,7 +393,7 @@ header {
   width: 100%;
   height: 255px;
   display: inline-block;
-  background-image: url(../img/project.jpg);
+  background-image: url('../img/project.jpg');
   background-repeat:no-repeat;
   background-size: cover;
   background-position: center;
@@ -408,8 +411,7 @@ header {
 }
 
 .video-subscribe {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)),
-  url(../img/background.jpg);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url('../img/background.jpg');
   background-size: cover;
   background-position-y: -534px;
   background-repeat: no-repeat;
@@ -466,7 +468,7 @@ header {
 .playpause {
   border: 1px solid #FFFFFF;
   border-radius: 200px;
-  background-image:url(../img/play-button.png);
+  background-image:url('../img/play-button.png');
   background-repeat:no-repeat;
   padding: 20px 0 20px 121px;
   position: absolute;
@@ -636,28 +638,43 @@ header {
 }
 
 /*RESPONSIVE*/
-@media (max-width: 992px) {
+@media (max-width: 1140px) {
   .container {
-    width: 960px;
+    padding: 0 15px;
   }
 }
 
-@media (max-width: 960px) {
-  .container {
-    width: 768px;
+@media (max-width: 925px) {
+  .serv-itm {
+    flex-direction: column;
+    align-items: center;
   }
- 
-  .about-us-item {
-    margin-right: 50px;
+
+  .border-img {
+    margin-bottom: 10px;
+  }
+
+  .border-img:last-child {
+    margin-bottom: 0;
+  }
+
+  .developer-text {
+    margin-right: 65px;
+  }
+
+  .projects {
+    flex-wrap: wrap;
+  }
+  
+  .link-project {
+    max-width: 100%;
+    flex-basis: 50%;
   }
 }
+
 @media (max-width: 768px) {
   body.lock {
     overflow: hidden;
-  }
-
-  .container {
-    width: 720px;
   }
 
   .nav-content {
@@ -728,52 +745,105 @@ header {
   }
 
   .services-items {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
   }
+
   .serv-itm {
-    flex-basis: 40%;
+    flex-direction: row;
+    margin: 0;
     margin-bottom: 30px;
   }
+
+  .img-developers {
+    display: none;
+  }
+
   .about-us {
     flex-wrap: wrap;
-  }
-  .about-us-item {
-    flex-basis:30%;
-    margin-right: 40px;
-    margin-bottom: 25px;
-
-  }
-  .projects {
-    flex-wrap: wrap;
+    margin: 0 auto;
     justify-content: space-around;
   }
-
-  .link-project {
-    margin-bottom: 20px;
+  .about-us-item {
+    margin: 0;
+    max-width: 100%;
   }
-  .playpause {
-    max-width: 30vw;
+
+  .about-us-item:nth-child(2n+1) {
+    display: none;
+  }
+  
+  .about-us-item-link {
+    display: block;
     text-align: center;
-    background-position-x: 15px;
-    padding-left: 80px;
+    align-self: flex-end;
   }
-  .our-links {
-    flex-wrap: wrap;
 
+  .all-sevice {
+    background: #fff;
   }
-  .item {
-    flex-basis: 40%;
+
+  .section-project {
+   padding-top: 70px;
+  }
+
+  .section-project .section-title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .section-project .section-subtitle {
+    margin-bottom: 50px;
+  }
+  
+  .video-subscribe .section-title {
+        font-size: 30px;
+        line-height: 42px;
+  }
+
+  .video-subscribe .section-subtitle {
+    margin-bottom: 35px;
+  }
+
+  .playpause {
+        width: auto;
+        background-position-x: center;
+        border: none;
+        top: 33%;
+        left: 43%;
+  }
+
+  .video-text {
+    display: none;
+  }
+
+  .title-all-service {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title-all-service .title-section {
+    margin-bottom: 30px; 
+    font-size: 30px;
+    line-height: 42px;
+    color: #4985FF;
+  }
+
+  .all-cards {
+    margin-bottom: 0;
+  }
+
+  .card {
+    flex-basis: 100%; 
+    margin-bottom: 25px;
+  }
+
+  .none {
+    display: none;
   }
 }
 
 @media (max-width:720px) {
-   .header {
-     padding-bottom: 220px;
-   }
-   .container {
-     max-width: 540px;
-   }
    .nav {
      justify-content: center;
    }
@@ -786,77 +856,14 @@ header {
    .serv-itm {
      flex-basis: 80%;
    }
-   .developer {
-     flex-wrap: wrap;
-   }
    .developer-text {
      text-align: center;
      margin-right: 0;
      margin-bottom: 30px;
    }
-   .img-developers {
-     margin:auto;
-   }
    .section-about-us {
      padding-top: 60px;
      padding-bottom: 50px;
-   }
-   .about-us  {
-     flex-wrap: wrap;
-   }
-   .about-us-item {
-
-     margin-right: 30px;
-     flex-basis: 80%;
-   }
-   .title-all-service {
-     flex-direction: column;
-     text-align: center;
-   }
-   .title-all-service .title-section {
-     margin-bottom: 30px; 
-     font-size: 30px;
-     line-height: 42px;
-     color: #4985FF;
-   }
-   .all-cards {
-     margin-bottom: 0;
-   }
-   .card {
-     flex-basis: 100%; 
-     margin-bottom: 25px;
-   }
-   .all-sevice {
-     background: #fff;
-   }
-   .section-project {
-    padding-top: 70px;
-   }
-   .section-project .section-title {
-     margin-bottom: 30px;
-     font-size: 30px;
-     line-height: 42px;
-   }
-   .section-project .section-subtitle {
-     margin-bottom: 50px;
-   }
-   
-   .video-subscribe .section-title {
-         font-size: 30px;
-         line-height: 42px;
-   }
-   .video-subscribe .section-subtitle {
-     margin-bottom: 35px;
-   }
-   .playpause {
-         width: auto;
-         background-position-x: center;
-         border: none;
-         top: 33%;
-         left: 43%;
-   }
-   .video-text {
-     display: none;
    }
  }
 
@@ -887,7 +894,7 @@ header {
       padding: 30px 20px;
     }
  }
- 
+
  @media (max-width: 500px) {
    .nav-link {
      font-size: 13px;
