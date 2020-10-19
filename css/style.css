@@ -250,6 +250,7 @@ header {
 .about-us {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 } 
 
 .about-us-item {
@@ -479,8 +480,8 @@ header {
   background-position-y: center;
   display: flex;
   align-items:center;
-  top:42%;
-  left: 35%;
+  top: calc(50% - 100px);
+  left: calc(50% - 150px);
 }
 
 .video-text {
@@ -578,6 +579,7 @@ header {
   margin-bottom: 40px;
   border-bottom: 1px solid #E0E0E0;
   padding-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .block-link{
@@ -638,6 +640,7 @@ header {
 }
 
 /*RESPONSIVE*/
+
 @media (max-width: 1140px) {
   .container {
     padding: 0 15px;
@@ -694,6 +697,7 @@ header {
   .nav-item {
     padding: 15px;
   }
+
   /********burger*/
   .burger {
     display: block;
@@ -754,6 +758,9 @@ header {
     margin-bottom: 30px;
   }
 
+  .developer-text {
+    margin-right: 0;
+  }
   .img-developers {
     display: none;
   }
@@ -763,6 +770,7 @@ header {
     margin: 0 auto;
     justify-content: space-around;
   }
+
   .about-us-item {
     margin: 0;
     max-width: 100%;
@@ -797,8 +805,8 @@ header {
   }
   
   .video-subscribe .section-title {
-        font-size: 30px;
-        line-height: 42px;
+    font-size: 30px;
+    line-height: 42px;
   }
 
   .video-subscribe .section-subtitle {
@@ -806,11 +814,10 @@ header {
   }
 
   .playpause {
-        width: auto;
-        background-position-x: center;
-        border: none;
-        top: 33%;
-        left: 43%;
+    width: auto;
+    background-position-x: center;
+    border: none;
+    left: calc(50% - 60px);
   }
 
   .video-text {
@@ -841,40 +848,17 @@ header {
   .none {
     display: none;
   }
+
+  .our-links .item {
+    flex-basis: 50%;
+  }
 }
 
-@media (max-width:720px) {
-   .nav {
-     justify-content: center;
-   }
-    .nav-item {
-     padding: 25px 15px;
-   }
-   .content {
-    margin-top: 160px;
-   }
-   .serv-itm {
-     flex-basis: 80%;
-   }
-   .developer-text {
-     text-align: center;
-     margin-right: 0;
-     margin-bottom: 30px;
-   }
-   .section-about-us {
-     padding-top: 60px;
-     padding-bottom: 50px;
-   }
- }
-
- @media (max-width:550px) {
-   .container {
-     width: 100%;
-     padding: 50px 20px;
-   }
+ @media (max-width: 576px) {
    .nav-item {
      padding: 20px 10px;
    }
+
    .section-service {
      padding: 50px 20px;
    }
@@ -890,100 +874,102 @@ header {
    .section-project {
      padding: 50px 20px;
    }
-    .footer {
+
+  .footer {
       padding: 30px 20px;
-    }
- }
+  }
 
- @media (max-width: 500px) {
-   .nav-link {
+  .nav-link {
      font-size: 13px;
-   }
-   .title-header {
-         font-size: 30px;
-         line-height: 38px;
-   }
-   .header .subtitle {
+  }
+
+  .title-header {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .header .subtitle {
      font-size: 14px;
+  }
+
+  .section-service .section-title {
+    font-size: 30px;
+    line-height: 38px;
    }
-   .section-service .section-title {
-     font-size: 30px;
-     line-height: 38px;
-   }
-   .section-service .section-subtitle {
-      font-size: 13px;
-      line-height: 21px;
-      margin-bottom: 45px;
-   }
-   .serv-itm {
-     align-items:center;
-   }
-   .item-text {
-     align-self:center;
-   }
-   .title-item {
-         font-size: 15px;
-         line-height: 20px;
-   }
-   .subtitle-item {
-     font-size: 12px;
-     line-height: 19px;
-   }
-   .section-about-us .section-title {
-     font-size: 30px;
-     line-height: 38px;
-   }
-   .section-about-us .section-subtitle {
-     font-size: 13px;
-     line-height: 21px;
- }
+
+  .section-service .section-subtitle {
+    font-size: 13px;
+    line-height: 21px;
+    margin-bottom: 45px;
+  }
+
+  .serv-itm {
+    align-items:center;
+  }
+
+  .item-text {
+    align-self:center;
+  }
+
+  .title-item {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .subtitle-item {
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  .section-about-us .section-title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .section-about-us .section-subtitle {
+    font-size: 13px;
+    line-height: 21px;
+  }
+
  .more {
-   font-size: 13px;
-   line-height: 21px;
+  font-size: 13px;
+  line-height: 21px;
  }
+
  .card-title {
-       font-size: 17px;
-       line-height: 15px;
+  font-size: 17px;
+  line-height: 15px;
  }
+
  .card-text {
-   font-size: 15px;
-   line-height: 15px;
+  font-size: 15px;
+  line-height: 15px;
  }
+
  .section-project .section-subtitle {
-   font-size: 13px;
-   line-height: 21px;
+  font-size: 13px;
+  line-height: 21px;
  }
+
+  .form {
+    flex-direction:column;
+    align-items: center;
+  }
+
+  .subscribe-input {
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 19px;
+  }
+
+  .submit {
+    border-radius: 30px;
+    width: 65%;
+    display: block;
+  }
 }
 
-@media (max-width:425px) {
-  .nav {
-    flex-wrap: wrap;
-  }
-  .nav-item {
-    text-align: center;
-    flex-basis:30%;
-  }
- .playpause {
-       top: 25%;
-       left: 40%;
- } 
- .form {
-   flex-direction:column;
-   align-items: center;
- }
- .subscribe-input {
-   width: 100%;
-   border-radius: 30px;
-   margin-bottom: 19px;
- }
- .submit {
-   border-radius: 30px;
-   width: 65%;
-   display: block;
- }
-}
-
-@media (max-width:405px) {
+@media (max-width: 320px) {
   .section-service .section-title,
   .section-about-us .section-title,
   .all-sevice .title-section,
@@ -998,25 +984,25 @@ header {
   .section-service .section-subtitle,
   .section-about-us .section-subtitle,
   .section-project .section-subtitle{
-      font-size: 13px;
-      line-height: 19px;
-      margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 19px;
+    margin-bottom: 20px;
   }
 
   .link {
     margin-bottom: 15px;
     font-size: 12px;
     line-height: 17px;
-   }
+  }
 
-   .footer-title {
-      font-size: 12px;
-      line-height: 17px;
-      margin-bottom: 15px;  
-   }
+  .footer-title {
+    font-size: 12px;
+    line-height: 17px;
+    margin-bottom: 15px;  
+  }
 
-   .footer {
-      padding: 30px 20px;
-   }
+  .footer {
+    padding: 30px 20px;
+  }
 }
 
