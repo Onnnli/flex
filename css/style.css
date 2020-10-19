@@ -174,7 +174,7 @@ header {
 
 .border-img:hover {
   border: 1px solid #4985FF;
-  cursor:
+  cursor: pointer;
 }
 
 .item-text {
